@@ -49,7 +49,16 @@ public class ProblemSet3 {
      */
     
     public void sign() {
-
+	   System.out.print("Enter an interger: ");
+	   int positiveORnegative = in.nextInt();
+	  
+	   if(positiveORnegative > 0){
+		   System.out.println("Positive.");
+	   } else if (positiveORnegative < 0){
+		   System.out.println("Negative.");
+	   } else {
+		   System.out.println("Zero.");
+	   }
     }
     
     /*
@@ -59,7 +68,14 @@ public class ProblemSet3 {
      */
     
     public void parity() {
-
+	   System.out.print("Enter an interger: ");
+	   int oddOReven = in.nextInt();
+	  
+	   if((oddOReven % 2) == 0){
+		   System.out.println("Even.");
+	   }else{
+		   System.out.println("Odd.");
+	   }
     }
     
     /*
@@ -69,7 +85,28 @@ public class ProblemSet3 {
      */
     
     public void ordered() {
-
+		System.out.println("\nEnter three intergers.\n");
+		
+		System.out.print("Enter an interger: ");
+		int order1 = in.nextInt();
+		System.out.print("Enter an interger: ");
+		int order2 = in.nextInt();
+		System.out.print("Enter an interger: ");
+		int order3 = in.nextInt();
+		
+		System.out.println("");
+		
+		if(order1 < order2 && order2 < order3){
+			System.out.println("Strictly Increasing.");
+		}else if(order1 <= order2 && order2 <= order3){
+			System.out.println("Increasing.");
+		}else if(order1 > order2 && order2 > order3){
+			System.out.println("Strictly Decreasing.");
+		}else if(order1 >= order2 && order2 >= order3){
+			System.out.println("Decreasing.");
+		}else{
+			System.out.println("Unordered.");
+		}
     }
     
     /*
@@ -79,7 +116,47 @@ public class ProblemSet3 {
      */
     
     public void gpa() {
-
+		double a = 4.00;
+		double b = 3.00;
+		double c = 2.00;
+		double d = 1.00;
+		double f = 0.00;
+		double plus = 0.33;
+		double minus = 0.33;
+		
+		System.out.print("\nEnter a letter grade: ");
+		String letterGradeBefore = in.nextLine();
+		
+		String letterGrade = letterGradeBefore.toUpperCase();
+		System.out.println("");
+		
+		if (letterGrade.equals("A+") || letterGrade.equals("A")){
+			System.out.printf("Your GPA is %.2f\n", a);
+		} else if (letterGrade.equals("A-")){
+			System.out.printf("Your GPA is %.2f\n", a - minus);
+		}else if (letterGrade.equals("B+")){
+			System.out.printf("Your GPA is %.2f\n", b + plus);
+		}else if (letterGrade.equals("B")){
+			System.out.printf("Your GPA is %.2f\n", b);
+		}else if (letterGrade.equals("B-")){
+			System.out.printf("Your GPA is %.2f\n", b - minus);
+		}else if (letterGrade.equals("C+")){
+			System.out.printf("Your GPA is %.2f\n", c + plus);
+		}else if (letterGrade.equals("C")){
+			System.out.printf("Your GPA is %.2f\n", c);
+		}else if (letterGrade.equals("C-")){
+			System.out.printf("Your GPA is %.2f\n", c - minus);
+		}else if (letterGrade.equals("D+")){
+			System.out.printf("Your GPA is %.2f\n", d + plus);
+		}else if (letterGrade.equals("D")){
+			System.out.printf("Your GPA is %.2f\n", d);
+		}else if (letterGrade.equals("D-")){
+			System.out.printf("Your GPA is %.2f\n", d - minus);
+		}else if (letterGrade.equals("F")){
+			System.out.printf("Your GPA is %.2f\n", f);
+		}else{
+			System.out.println("That's not a valid letter grade.");
+		}
     }
     
     /*
