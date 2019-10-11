@@ -130,6 +130,7 @@ public class ProblemSet3 {
 		String letterGrade = letterGradeBefore.toUpperCase();
 		System.out.println("");
 		
+		
 		if (letterGrade.equals("A+") || letterGrade.equals("A")){
 			System.out.printf("Your GPA is %.2f\n", a);
 		} else if (letterGrade.equals("A-")){
