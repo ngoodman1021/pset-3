@@ -340,6 +340,22 @@ public class ProblemSet3 {
      */
     
     public void months() {        
+	System.out.print("\nEnter a month: ");
+        String months = in .nextLine();
+
+        months = months.toUpperCase();
+        if (months.equals("January") || months.equals("March") || months.equals("May") || 
+	    months.equals("July") || months.equals("August") || months.equals("October") || 
+	    months.equals("December")) {
+            System.out.println("\n31 days.");
+        } else if (months.equals("April") || months.equals("June") || months.equals("September") || 
+		   months.equals("November")) {
+            System.out.println("\n30 days.");
+        } else if (months.equals("February")) {
+            System.out.println("\n28 or 29 days.");
+        } else {
+            System.out.println("\nThat's not a valid month.");
+        }
 
     }
     
@@ -350,6 +366,29 @@ public class ProblemSet3 {
      */
     
     public void salary() {
+	System.out.print("\nWage: ");
+        double wage = in .nextDouble();
+        if (wage < 0.01) {
+            System.out.println("Invalid entry. Enter a wage greater than 0: ");
+        }
+        
+	System.out.print("Hours: ");
+        double hour = in .nextDouble();
+        if (hour < 0) {
+            System.out.println("Invalid entry. Enter a number of hours greater than 0: ");
+        }
 
+        double overtime = hour - 40;
+
+        if (overtime > 0) {
+            hour = 40;
+            double overtimePay = overtime * (1.5 * wage);
+            double paycheck = (wage * hour) + overtimePay;
+        } else if (overtime <= 0) {
+            double paycheck = wage * hour;
+        }
+
+        System.out.printf("\nYou'll make $%,.2f", paycheck);
+        System.out.print(" this week.\n\n");
     }
 }
