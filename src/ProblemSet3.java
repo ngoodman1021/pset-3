@@ -85,28 +85,28 @@ public class ProblemSet3 {
      */
     
     public void ordered() {
-		System.out.println("\nEnter three integers.\n");
+	System.out.println("\nEnter three integers.\n");
 		
-		System.out.print("Enter an integer: ");
-		int order1 = in.nextInt();
-		System.out.print("Enter an integer: ");
-		int order2 = in.nextInt();
-		System.out.print("Enter an integer: ");
-		int order3 = in.nextInt();
+	System.out.print("Enter an integer: ");
+	int order1 = in.nextInt();
+	System.out.print("Enter an integer: ");
+	int order2 = in.nextInt();
+	System.out.print("Enter an integer: ");
+	int order3 = in.nextInt();
 		
-		System.out.println("");
+	System.out.println("");
 		
-		if(order1 < order2 && order2 < order3){
-			System.out.println("Strictly Increasing.");
-		}else if(order1 <= order2 && order2 <= order3){
-			System.out.println("Increasing.");
-		}else if(order1 > order2 && order2 > order3){
-			System.out.println("Strictly Decreasing.");
-		}else if(order1 >= order2 && order2 >= order3){
-			System.out.println("Decreasing.");
-		}else{
-			System.out.println("Unordered.");
-		}
+	if(order1 < order2 && order2 < order3){
+		System.out.println("Strictly Increasing.");
+	}else if(order1 <= order2 && order2 <= order3){
+		System.out.println("Increasing.");
+	}else if(order1 > order2 && order2 > order3){
+		System.out.println("Strictly Decreasing.");
+	}else if(order1 >= order2 && order2 >= order3){
+		System.out.println("Decreasing.");
+	}else{
+		System.out.println("Unordered.");
+	}
     }
     
     /*
@@ -116,48 +116,48 @@ public class ProblemSet3 {
      */
     
     public void gpa() {
-		double a = 4.00;
-		double b = 3.00;
-		double c = 2.00;
-		double d = 1.00;
-		double f = 0.00;
-		double plus = 0.33;
-		double minus = 0.33;
+	double a = 4.00;
+	double b = 3.00;
+	double c = 2.00;
+	double d = 1.00;
+	double f = 0.00;
+	double plus = 0.33;
+	double minus = 0.33;
 		
-		System.out.print("\nEnter a letter grade: ");
-		String letterGradeBefore = in.nextLine();
+	System.out.print("\nEnter a letter grade: ");
+	String letterGradeBefore = in.nextLine();
 		
-		String letterGrade = letterGradeBefore.toUpperCase();
-		System.out.println("");
+	String letterGrade = letterGradeBefore.toUpperCase();
+	System.out.println("");
 		
 		
-		if (letterGrade.equals("A+") || letterGrade.equals("A")){
-			System.out.printf("Your GPA is %.2f\n", a);
-		} else if (letterGrade.equals("A-")){
-			System.out.printf("Your GPA is %.2f\n", a - minus);
-		}else if (letterGrade.equals("B+")){
-			System.out.printf("Your GPA is %.2f\n", b + plus);
-		}else if (letterGrade.equals("B")){
-			System.out.printf("Your GPA is %.2f\n", b);
-		}else if (letterGrade.equals("B-")){
-			System.out.printf("Your GPA is %.2f\n", b - minus);
-		}else if (letterGrade.equals("C+")){
-			System.out.printf("Your GPA is %.2f\n", c + plus);
-		}else if (letterGrade.equals("C")){
-			System.out.printf("Your GPA is %.2f\n", c);
-		}else if (letterGrade.equals("C-")){
-			System.out.printf("Your GPA is %.2f\n", c - minus);
-		}else if (letterGrade.equals("D+")){
-			System.out.printf("Your GPA is %.2f\n", d + plus);
-		}else if (letterGrade.equals("D")){
-			System.out.printf("Your GPA is %.2f\n", d);
-		}else if (letterGrade.equals("D-")){
-			System.out.printf("Your GPA is %.2f\n", d - minus);
-		}else if (letterGrade.equals("F")){
-			System.out.printf("Your GPA is %.2f\n", f);
-		}else{
-			System.out.println("That's not a valid letter grade.");
-		}
+	if (letterGrade.equals("A+") || letterGrade.equals("A")){
+		System.out.printf("Your GPA is %.2f\n", a);
+	} else if (letterGrade.equals("A-")){
+		System.out.printf("Your GPA is %.2f\n", a - minus);
+	}else if (letterGrade.equals("B+")){
+		System.out.printf("Your GPA is %.2f\n", b + plus);
+	}else if (letterGrade.equals("B")){
+		System.out.printf("Your GPA is %.2f\n", b);
+	}else if (letterGrade.equals("B-")){
+		System.out.printf("Your GPA is %.2f\n", b - minus);
+	}else if (letterGrade.equals("C+")){
+		System.out.printf("Your GPA is %.2f\n", c + plus);
+	}else if (letterGrade.equals("C")){
+		System.out.printf("Your GPA is %.2f\n", c);
+	}else if (letterGrade.equals("C-")){
+		System.out.printf("Your GPA is %.2f\n", c - minus);
+	}else if (letterGrade.equals("D+")){
+		System.out.printf("Your GPA is %.2f\n", d + plus);
+	}else if (letterGrade.equals("D")){
+		System.out.printf("Your GPA is %.2f\n", d);
+	}else if (letterGrade.equals("D-")){
+		System.out.printf("Your GPA is %.2f\n", d - minus);
+	}else if (letterGrade.equals("F")){
+		System.out.printf("Your GPA is %.2f\n", f);
+	}else{
+		System.out.println("That's not a valid letter grade.");
+	}
     }
     
     /*
@@ -279,7 +279,17 @@ public class ProblemSet3 {
      */
     
     public void leapYear() {
-
+	System.out.print("Enter a year: ");
+	int leapYear = in.nextInt();
+	  
+	if(leapYear < 0){
+	    	System.out.print("\nInvalid entry. Enter a year greater than 0: ");
+            	leapYear = in .nextInt();
+	} else if ((leapYear % 4 == 0 && leapYear % 100 != 0) || (leapYear % 400 == 0)){
+		System.out.println("\n" + leapYear + "is a leap year.");
+	} else {
+		System.out.println("\n" + leapYear + "is not a leap year.");
+	}
     }
     
     /*
@@ -290,7 +300,37 @@ public class ProblemSet3 {
      */
     
     public void state() {
-
+	System.out.print("\nEnter a temperature: ");
+	double temp = in.nextDouble();
+	System.out.print("Enter a scale: ");
+	char scale = in.next.charAt(0);
+	scale = Charcater.toUpperCase(scale);
+	    
+	int fahFreeze = 32;
+	int fahBoiling = 212;
+	int calFreeze = 0;
+	int calBoiling = 100;
+	  
+	if(scale != 'F' && scale != 'C'){
+	    	System.out.print("\nInvalid entry. Enter a year greater than 0: ");
+            	scale = in .nextInt();
+	} else if (temp = 'F'){
+	    if(temp <= fahFreeze ){
+		System.out.println("\nSolid");
+	    }else if((temp > fahFreeze) && (temp < fahBoiling)){
+		System.out.println("\nLiquid");
+	    }else if(temp >= fahBoiling){
+		System.out.println("\Gas");
+	    }
+	} else if(temp = 'C'){
+	    if(temp <= calFreeze ){
+		System.out.println("\nSolid");
+	    }else if((temp > calFreeze) && (temp < calBoiling)){
+		System.out.println("\nLiquid");
+	    }else if(temp >= calBoiling){
+		System.out.println("\Gas");
+	    }
+	}
     }
     
     /*
