@@ -49,7 +49,7 @@ public class ProblemSet3 {
      */
     
     public void sign() {
-	   System.out.print("Enter an interger: ");
+	   System.out.print("Enter an integer: ");
 	   int positiveORnegative = in.nextInt();
 	  
 	   if(positiveORnegative > 0){
@@ -68,7 +68,7 @@ public class ProblemSet3 {
      */
     
     public void parity() {
-	   System.out.print("Enter an interger: ");
+	   System.out.print("Enter an integer: ");
 	   int oddOReven = in.nextInt();
 	  
 	   if((oddOReven % 2) == 0){
@@ -85,13 +85,13 @@ public class ProblemSet3 {
      */
     
     public void ordered() {
-		System.out.println("\nEnter three intergers.\n");
+		System.out.println("\nEnter three integers.\n");
 		
-		System.out.print("Enter an interger: ");
+		System.out.print("Enter an integer: ");
 		int order1 = in.nextInt();
-		System.out.print("Enter an interger: ");
+		System.out.print("Enter an integer: ");
 		int order2 = in.nextInt();
-		System.out.print("Enter an interger: ");
+		System.out.print("Enter an integer: ");
 		int order3 = in.nextInt();
 		
 		System.out.println("");
@@ -167,7 +167,36 @@ public class ProblemSet3 {
      */
     
     public void grade() {
-
+      System.out.print("\nEnter a grade: ");
+      int numberGrade = in.nextInt();
+      System.out.println("");
+	    
+      int aPlus = 100;
+      int aMinus = 90;
+      int bPLus = 89;
+      int bMinus = 80;
+      int cPlus = 79;
+      int cMinus = 70;
+      int dPlus = 69;
+      int dMinus = 60;
+      int fPlus = 59;
+      int fMinus = 0;
+	    
+      if(numberGrade > aPlus){
+        System.out.println("Grades above 100 are invalid. \n");
+      }else if(numberGrade <= aPlus && numberGrade >= aMinus){
+        System.out.println("You received an A.\n");
+      }else if(numberGrade <= bPLus && numberGrade >= bMinus){
+        System.out.println("You received a B.\n");
+      }else if(numberGrade <= cPlus && numberGrade >= cMinus){
+        System.out.println("You received a C.\n");
+      }else if(numberGrade <= dPLus && numberGrade >= dMinus){
+        System.out.println("You received a D.\n");
+      }else if(numberGrade <= fPlus && numberGrade >= fMinus){
+        System.out.println("You received a F.\n");
+      }else if(numberGrade < fMinus){
+        System.out.println("Grades below 0 are invalid.\n");
+      }
     }
     
     /*
@@ -177,7 +206,70 @@ public class ProblemSet3 {
      */
     
     public void cards() {
+      System.out.print("\nEnter a card: ");
+      String card = in.nextLine();
+      String rank = card.substring(0,1);
+      String suit = card.substring(1,2);
+      System.out.println("");
+      //sets values needed for the code
+	    
+      boolean acceptableRank = true;
+      boolean acceptableSuit = true;
+      //states whether or not the cars is acceptable or not
 
+      if(!rank.equals("2") && !rank.equals("3") && !rank.equals("4") && !rank.equals("5") && !rank.equals("6") &&
+         !rank.equals("7") && !rank.equals("8") && !rank.equals("9") && !rank.equals("T") && !rank.equals("J") &&
+         !rank.equals("Q") && !rank.equals("K") && !rank.equals("A")){
+          acceptableRank = false;
+        }else if(!suit.equals("C") && !suit.equals("D") && !suit.equals("H") && !suit.equals("S")){
+          acceptableSuit = false;
+        }
+
+      if(acceptableRank == false){
+        System.out.println("That's not a valid rank.\n");
+      }else if(acceptableSuit == false){
+        System.out.print("");
+      }else if(rank.equals("2")){
+        System.out.print("Two of ");
+      }else if(rank.equals("3")){
+        System.out.print("Three of ");
+      }else if(rank.equals("4")){
+        System.out.print("Four of ");
+      }else if(rank.equals("5")){
+        System.out.print("Five of ");
+      }else if(rank.equals("6")){
+        System.out.print("Six of ");
+      }else if(rank.equals("7")){
+        System.out.print("Seven of ");
+      }else if(rank.equals("8")){
+        System.out.print("Eight of ");
+      }else if(rank.equals("9")){
+        System.out.print("Nine of ");
+      }else if(rank.equals("T")){
+        System.out.print("Ten of ");
+      }else if(rank.equals("J")){
+        System.out.print("Jack of ");
+      }else if(rank.equals("Q")){
+        System.out.print("Queen of ");
+      }else if(rank.equals("K")){
+        System.out.print("King of ");
+      }else if(rank.equals("A")){
+        System.out.print("Ace of ");
+      }
+
+      if(acceptableSuit == false){
+        System.out.print("That's not a valid suit.\n");
+      }else if(acceptableRank == false){
+        System.out.print("");
+      }else if(suit.equals("C")){
+        System.out.print("Clubs.\n");
+      }else if(suit.equals("D")){
+        System.out.print("Diamonds.\n");
+      }else if(suit.equals("H")){
+        System.out.print("Hearts.\n");
+      }else if(suit.equals("S")){
+        System.out.print("Spades.\n");
+      }
     }
     
     /*
