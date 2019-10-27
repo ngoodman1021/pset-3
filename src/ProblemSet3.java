@@ -313,22 +313,22 @@ public class ProblemSet3 {
 	  
 	if(scale != 'F' && scale != 'C'){
 	    	System.out.print("\nInvalid entry. Enter a year greater than 0: ");
-            	scale = in .nextInt();
-	} else if (temp = 'F'){
+            	scale = in.next.charAt(0);
+	} else if (temp == 'F'){
 	    if(temp <= fahFreeze ){
 		System.out.println("\nSolid");
 	    }else if((temp > fahFreeze) && (temp < fahBoiling)){
 		System.out.println("\nLiquid");
 	    }else if(temp >= fahBoiling){
-		System.out.println("\Gas");
+		System.out.println("\nGas");
 	    }
-	} else if(temp = 'C'){
+	} else if(temp == 'C'){
 	    if(temp <= calFreeze ){
 		System.out.println("\nSolid");
 	    }else if((temp > calFreeze) && (temp < calBoiling)){
 		System.out.println("\nLiquid");
 	    }else if(temp >= calBoiling){
-		System.out.println("\Gas");
+		System.out.println("\nGas");
 	    }
 	}
     }
