@@ -173,7 +173,7 @@ public class ProblemSet3 {
 	    
       int aPlus = 100;
       int aMinus = 90;
-      int bPLus = 89;
+      int bPlus = 89;
       int bMinus = 80;
       int cPlus = 79;
       int cMinus = 70;
@@ -182,15 +182,15 @@ public class ProblemSet3 {
       int fPlus = 59;
       int fMinus = 0;
 	    
-      if(numberGrade > aPlus){
+      if(numberGrade>aPlus){
         System.out.println("Grades above 100 are invalid. \n");
       }else if(numberGrade <= aPlus && numberGrade >= aMinus){
         System.out.println("You received an A.\n");
-      }else if(numberGrade <= bPLus && numberGrade >= bMinus){
+      }else if(numberGrade <= bPlus && numberGrade >= bMinus){
         System.out.println("You received a B.\n");
       }else if(numberGrade <= cPlus && numberGrade >= cMinus){
         System.out.println("You received a C.\n");
-      }else if(numberGrade <= dPLus && numberGrade >= dMinus){
+      }else if(numberGrade <=dPlus && numberGrade >= dMinus){
         System.out.println("You received a D.\n");
       }else if(numberGrade <= fPlus && numberGrade >= fMinus){
         System.out.println("You received a F.\n");
@@ -301,20 +301,18 @@ public class ProblemSet3 {
     
     public void state() {
 	System.out.print("\nEnter a temperature: ");
-	double temp = in.nextDouble();
+	int temp = in.nextInt();
+    in.nextLine();
 	System.out.print("Enter a scale: ");
-	char scale = in.next.charAt(0);
-	scale = Charcater.toUpperCase(scale);
+	String scale = in.nextLine();
+	System.out.println("");
 	    
 	int fahFreeze = 32;
 	int fahBoiling = 212;
 	int calFreeze = 0;
 	int calBoiling = 100;
 	  
-	if(scale != 'F' && scale != 'C'){
-	    	System.out.print("\nInvalid entry. Enter a year greater than 0: ");
-            	scale = in.next.charAt(0);
-	} else if (temp == 'F'){
+	if(temp == 'F'){
 	    if(temp <= fahFreeze ){
 		System.out.println("\nSolid");
 	    }else if((temp > fahFreeze) && (temp < fahBoiling)){
@@ -379,16 +377,16 @@ public class ProblemSet3 {
         }
 
         double overtime = hour - 40;
+		double paycheck;
 
         if (overtime > 0) {
             hour = 40;
             double overtimePay = overtime * (1.5 * wage);
-            double paycheck = (wage * hour) + overtimePay;
+            paycheck = (wage * hour) + overtimePay;
+			System.out.printf("\nYou'll make $%,.2f", paycheck + " this week.\n\n");
         } else if (overtime <= 0) {
-            double paycheck = wage * hour;
+            paycheck = wage * hour;
+			System.out.printf("\nYou'll make $%,.2f", paycheck + " this week.\n\n");
         }
-
-        System.out.printf("\nYou'll make $%,.2f", paycheck);
-        System.out.print(" this week.\n\n");
     }
 }
